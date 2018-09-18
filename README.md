@@ -2,7 +2,7 @@
 
 [web browser app](https://stormy-savannah-54217.herokuapp.com/)
 
-![Main.png](https://raw.githubusercontent.com/greenmoon1558/test__task/master/public/imgs/main.jpg)
+![Main.png](https://raw.githubusercontent.com/greenmoon1558/test__task/master/public/imgs/main.png)
 
 
 ## Установки зависимостей проекта
