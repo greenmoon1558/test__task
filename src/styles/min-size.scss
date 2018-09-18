@@ -1,0 +1,61 @@
+@media screen and (max-width: 1024px) {
+    .l-contact__info{
+        display: none;
+    }
+    .c-contact,
+    .l-contact__list,
+    .l-content{
+        width: auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .l-chat-container{
+        width: auto;
+    }
+    .c-menu__toggle_button{
+        display: inline-block;
+        margin: 10px 20px;
+        background: #fff;
+        border-radius: 10px;
+        margin: 10px 20px;
+        padding: 0 15px;
+        border:1px solid #EDF0F4;
+        &:active,
+        &:focus,
+        &:hover{
+           background-color: #F7F9FC;
+        }
+    }
+    .l-sidebar{
+        display: none;
+    }
+    main.l-main{
+        margin-left: 0px;
+    }
+    .c-write-message{
+        background-color: $white;
+        position: sticky;
+        bottom: 0;
+    }
+    .c-search{
+        background-color: $white;
+        position: sticky;
+        top:0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .c-breadcrumbs{
+        display: none;
+    }
+    .l-content{
+        margin: 0;
+    }
+    .l-contact__list {
+        display: none;
+    }
+    .l-chat-container{
+        width: 100%;
+        height: 100%;
+    }
+}

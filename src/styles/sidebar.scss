@@ -1,0 +1,112 @@
+$sidebar-backgorund: #01134E;
+$slidebar-width: 80px;
+$logo-size: 35px;
+$sidebar__item-icon-size: 20px;
+$sidebar__item-border-active: #0AD69C;
+$sidebar__item-padding: 14px;
+$sidebar__unlooked-backgorundcolor: #2A74DB;
+$sidebar__unlooked-size: 19px;
+
+.l-sidebar {
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    width: $slidebar-width;
+    height: 100%;
+    background-color: $sidebar-backgorund;
+    animation: animateleft 0.4s;
+    display: flex;
+    justify-content: stretch;
+    align-items: stretch;
+    flex-direction: column;
+    .c-logo {
+        margin: $sidebar__item-padding+5px auto $sidebar__item-padding;
+    }
+    .c-logo__link {
+    }
+    .c-logo__image {
+        width: $logo-size;
+        height: $logo-size;
+    }
+    .c-menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .c-memu__item {
+        margin: 37px 0;
+        padding: $sidebar__item-padding 0;
+        border: 0;
+        border-left: 4px solid  $sidebar-backgorund;
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited {
+            border-left: 4px solid $sidebar__item-border-active;
+            
+            }
+    }
+    .c-menu__link {
+        margin: 0 auto;
+        display: block;
+    } 
+    .button-icon { 
+        width: $sidebar__item-icon-size;
+        height: $sidebar__item-icon-size;
+    }
+    @mixin icon-backgorund($icon) {
+        background: url('../../public/imgs/sprite.svg##{$icon}') no-repeat center center;
+    }
+    @mixin icon($icon) {
+        .icon--#{$icon} {
+            @include icon-backgorund($icon);
+            &:active,
+            &:focus,
+            &:hover {
+                @include icon-backgorund('#{$icon}-white');
+            }
+            &::after {
+                content: "";
+                clear: both;
+                display: table-cell;
+            }
+            &.is-unlooked::after {
+                content: "1";
+                position: relative;
+                background-color: $sidebar__unlooked-backgorundcolor;
+                color: $white;
+                border-radius: 50%;
+                width: $sidebar__unlooked-size;
+                height: $sidebar__unlooked-size;
+                left: 10px;
+                bottom: 9px;
+                display: inline-block;
+                text-align: center;
+                font-size: 12px;
+                line-height: $sidebar__unlooked-size;
+            }
+        }
+        .c-memu__item:active .icon--#{$icon},
+        .c-memu__item:focus .icon--#{$icon},
+        .c-memu__item:hover .icon--#{$icon},
+        .c-memu__item:visited .icon--#{$icon} {
+            @include icon-backgorund('#{$icon}-white');
+        }
+    }
+    @include icon('calendar');
+    @include icon('profile');
+    @include icon('setting');
+    @include icon('team');
+    @include icon('message');
+}
+ 
+@keyframes animateleft {
+    from {
+        left:-300px;
+        opacity:0;
+    } 
+    to {
+        left:0;
+        opacity:1;
+    }
+}

@@ -1,0 +1,76 @@
+$header-photo-size: 22px;
+
+.l-header {
+  background-color: $white;
+  height: 61px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 1px 3px #DAE4F2;
+}
+.c-menu__toggle_button {
+    display: none;
+}
+.c-breadcrumbs {
+    list-style: none;
+    margin: 0 0 0 40px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.c-breadcrumbs__link {
+    $black: #252F48;
+    color: $black;
+    font-size: 13px;
+    line-height: 15px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+.c-breadcrumbs__item:not(:last-of-type) .c-breadcrumbs__link::after {
+    content: "";
+    clear: both;
+    display: inline-block;
+    margin: 0 12px;
+    background: url('../../public/imgs/sprite.svg#arrow-right') no-repeat center;
+    width: 5px;
+    height: 9px;
+}
+.c-userinfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.c-userinfo__photo {
+    border-radius: 50%;
+    background: url('../../public/imgs/user.png') no-repeat center;
+    background-size: 100%;
+    width: $header-photo-size;
+    height: $header-photo-size;
+}
+.c-userinfo__name {
+    $black: #252F48;
+    margin: 0 8px 0 9px;
+    color: $black;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+.c-userinfo__button {
+    border: none;
+    background-color: $white;
+    width: 4px;
+    height: 7px;
+    margin: 0 41px 0 0;
+} 
+.icon--arrow {
+    background: url('../../public/imgs/sprite.svg#arrow-bottom') no-repeat center center;
+        &:active,
+        &:focus,
+        &:hover,
+        &:visited {
+        background: url('../../public/imgs/sprite.svg#arrow-bottom-lightgreen') no-repeat center center;
+    }
+} 
+.button-icon {
+    } 

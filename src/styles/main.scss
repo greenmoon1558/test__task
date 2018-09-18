@@ -1,0 +1,16 @@
+@import './reset.css';
+@import './variables.scss';
+@import './sidebar.scss';
+@import './header.scss';  
+@import './chat.scss';
+@import './min-size.scss';
+ 
+.l-main {
+    margin-left: $slidebar-width;
+    transition: margin-left .4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    background-color: $content-background;
+}
