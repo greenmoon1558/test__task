@@ -54,6 +54,9 @@ $sidebar__unlooked-size: 19px;
         width: $sidebar__item-icon-size;
         height: $sidebar__item-icon-size;
     }
+    .c-memu__text{
+        display: none;
+    }
     @mixin icon-backgorund($icon) {
         background: url('../../public/imgs/sprite.svg##{$icon}') no-repeat center center;
     }

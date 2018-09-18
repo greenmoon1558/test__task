@@ -1,6 +1,6 @@
 ## Лендинг 
 
-[web browser app](https://quiet-lake-27064.herokuapp.com/)
+[web browser app](https://stormy-savannah-54217.herokuapp.com/)
 
 ![Main.png](https://raw.githubusercontent.com/greenmoon1558/test__task/master/public/imgs/main.jpg)
 
